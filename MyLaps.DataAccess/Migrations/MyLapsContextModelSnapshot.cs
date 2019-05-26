@@ -57,6 +57,8 @@ namespace MyLaps.DataAccess.Migrations
 
                     b.Property<int?>("CorralId");
 
+                    b.Property<string>("CorralName");
+
                     b.Property<int>("Gender");
 
                     b.Property<int>("RaceTime");

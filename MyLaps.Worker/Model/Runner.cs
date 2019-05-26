@@ -8,10 +8,11 @@
         public long RaceTime { get; set; }
         public int? CorralId { get; set; }
         public int BIBNumber { get; set; }
+        public string CorralName { get; set; }
 
         protected bool Equals(Runner other)
         {
-            return Age == other.Age && Gender == other.Gender && RaceTime == other.RaceTime && CorralId == other.CorralId && BIBNumber == other.BIBNumber;
+            return Age == other.Age && Gender == other.Gender && RaceTime == other.RaceTime && CorralId == other.CorralId && BIBNumber == other.BIBNumber && string.Equals(CorralName, other.CorralName);
         }
 
         public override bool Equals(object obj)
@@ -31,6 +32,7 @@
                 hashCode = (hashCode * 397) ^ RaceTime.GetHashCode();
                 hashCode = (hashCode * 397) ^ CorralId.GetHashCode();
                 hashCode = (hashCode * 397) ^ BIBNumber;
+                hashCode = (hashCode * 397) ^ (CorralName != null ? CorralName.GetHashCode() : 0);
                 return hashCode;
             }
         }

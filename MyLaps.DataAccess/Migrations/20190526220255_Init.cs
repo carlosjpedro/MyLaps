@@ -38,6 +38,7 @@ namespace MyLaps.DataAccess.Migrations
                     Age = table.Column<int>(nullable: false),
                     Gender = table.Column<int>(nullable: false),
                     CorralId = table.Column<int>(nullable: true),
+                    CorralName = table.Column<string>(nullable: true),
                     BIBNumber = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

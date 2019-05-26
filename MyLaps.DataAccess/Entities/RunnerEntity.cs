@@ -13,6 +13,7 @@ namespace MyLaps.DataAccess.Entities
 
         [ForeignKey("Corral")]
         public int? CorralId { get; set; }
+        public string CorralName { get; set; }
         public int BIBNumber { get; set; }
     }
 }

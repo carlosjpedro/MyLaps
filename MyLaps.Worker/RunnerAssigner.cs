@@ -69,6 +69,7 @@ namespace MyLaps.Worker
                     {
                         runner.CorralId = corral.Id;
                         runner.BIBNumber = corral.StartBIBNumber + corral.RunnerCount;
+                        runner.CorralName = corral.Name;
                         corral.RunnerCount++;
                         break;
                     }

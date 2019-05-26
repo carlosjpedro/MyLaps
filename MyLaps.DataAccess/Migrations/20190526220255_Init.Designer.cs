@@ -9,7 +9,7 @@ using MyLaps.DataAccess;
 namespace MyLaps.DataAccess.Migrations
 {
     [DbContext(typeof(MyLapsContext))]
-    [Migration("20190526213822_Init")]
+    [Migration("20190526220255_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -58,6 +58,8 @@ namespace MyLaps.DataAccess.Migrations
                     b.Property<int>("BIBNumber");
 
                     b.Property<int?>("CorralId");
+
+                    b.Property<string>("CorralName");
 
                     b.Property<int>("Gender");
 
