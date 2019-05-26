@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @model CorralListViewModel
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Criteria</th>
+            <th>Max Runners</th>
+            <th>Start BIB</th>
+        </tr>
+    </thead>
+    @foreach (var corral in Model.Corrals)
+    {
+        <tr>
+            <td>@corral.Name</td>
+            <td>@corral.CriteriaType</td>
+            <td>@corral.MaxElements</td>
+            <td>@corral.StartBIBNumber</td>
+            <td><a asp-action="Edit" asp-route-id="@corral.Id">Edit Corral</a></td>
+        </tr>
+    }
+</table>
+
+@using (Html.BeginForm("Generate", "Corral", FormMethod.Post))
+{
+    <button type="submit" class="btn-primary">Generate Runners</button>
+}
+@using (Html.BeginForm("Assign", "Corral", FormMethod.Post))
+{
+    <button type="submit" class="btn-primary">Assign Runners</button>
+}
+
+@using (Html.BeginForm("Index", "Runners", FormMethod.Post))
+{
+    <button type="submit" class="btn-primary">View Runners</button>
+}
+
+@using (Html.BeginForm("Reset", "Corral", FormMethod.Post))
+{
+    <button type="submit" class="btn-primary">Reset Database</button>
+}
+

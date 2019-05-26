@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MyLaps.Worker.Model.Runner>
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>BIB</th>
+        <th>Corral</th>
+        <th>Age</th>
+        <th>Gender</th>
+    </tr>
+    </thead>
+    @foreach (var runner in Model.OrderBy(x => x.CorralId).ThenBy(x => x.BIBNumber))
+    {
+    <tr>
+        <td>@runner.BIBNumber</td>
+        <td>@runner.CorralId</td>
+        <td>@runner.Age</td>
+        <td>@runner.Gender</td>
+        <td>@runner.RaceTime</td>
+
+    </tr>
+    }
+</table>

@@ -32,10 +32,9 @@ namespace MyLaps.RunnerCorrals.ConsoleApp
                     Console.WriteLine("Visualise Runner, Pick a Cooral: ");
                     foreach (var corral in workflowEngine.Corrals)
                     {
-                        Console.WriteLine($"[{corral.Name}] Max Runners: {corral.MaxElements} Current Runner : {corral.Count}");
+                        Console.WriteLine(
+                            $"[{corral.Name}] Max Runners: {corral.MaxElements} Current Runner : {corral.Count}");
                     }
-                    var corralName = Console.ReadKey().KeyChar.ToString().ToUpper();
-                    var corral = workflowEngine.Corrals.Select(x => x.Name = corralName);
 
 
 
