@@ -23,5 +23,10 @@ namespace MyLaps.RunnerCorrals
 
             return runner => runner.RaceTime >= minTime && runner.RaceTime <= maxTime;
         }
+
+        public Func<Runner, bool> DefaultCriteria
+        {
+            get { return runner => true; }
+        }
     }
 }

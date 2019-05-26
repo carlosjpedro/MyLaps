@@ -29,5 +29,9 @@
                 return hashCode;
             }
         }
+        public override string ToString()
+        {
+            return $"Age: {Age}\tGender: {Gender}\tRace Time: {RaceTime}";
+        }
     }
 }

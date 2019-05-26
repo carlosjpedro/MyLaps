@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLaps.Web.Tests", "MyLaps.Web.Tests\MyLaps.Web.Tests.csproj", "{8F09302D-8792-4E43-83C8-C7E4579D04CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLaps.RunnerCorrals", "MyLaps.RunnerCorrals\MyLaps.RunnerCorrals.csproj", "{319D292E-17A4-47D9-AB68-14EAE9432634}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLaps.RunnerCorrals", "MyLaps.RunnerCorrals\MyLaps.RunnerCorrals.csproj", "{319D292E-17A4-47D9-AB68-14EAE9432634}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLaps.RunnerCorrals.Tests", "MyLaps.RunnerCorrals.Tests\MyLaps.RunnerCorrals.Tests.csproj", "{711B66F5-CEC5-4B91-8854-39763B0109B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLaps.RunnerCorrals.Tests", "MyLaps.RunnerCorrals.Tests\MyLaps.RunnerCorrals.Tests.csproj", "{711B66F5-CEC5-4B91-8854-39763B0109B1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLaps.RunnerCorrals.Console", "MyLaps.RunnerCorrals.Console\MyLaps.RunnerCorrals.Console.csproj", "{34C3BE5F-52FD-41D6-B46F-14341CE59542}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLaps.RunnerCorrals.ConsoleApp", "MyLaps.RunnerCorrals.Console\MyLaps.RunnerCorrals.ConsoleApp.csproj", "{34C3BE5F-52FD-41D6-B46F-14341CE59542}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8F09302D-8792-4E43-83C8-C7E4579D04CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F09302D-8792-4E43-83C8-C7E4579D04CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F09302D-8792-4E43-83C8-C7E4579D04CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F09302D-8792-4E43-83C8-C7E4579D04CB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{319D292E-17A4-47D9-AB68-14EAE9432634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{319D292E-17A4-47D9-AB68-14EAE9432634}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{319D292E-17A4-47D9-AB68-14EAE9432634}.Release|Any CPU.ActiveCfg = Release|Any CPU

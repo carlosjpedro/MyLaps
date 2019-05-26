@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MyLaps.RunnerCorrals.Model;
 
 namespace MyLaps.RunnerCorrals
@@ -6,14 +7,17 @@ namespace MyLaps.RunnerCorrals
     internal class RunnerGenerator : IRunnerGenerator
     {
         Random _random = new Random();
-        public Runner Next()
+        public IEnumerable<Runner> Generate(int count)
         {
-            return new Runner
+            for (var i = 0; i < count; i++)
             {
-                Age = _random.Next(20, 70),
-                Gender = _random.Next() % 2 == 0 ? Gender.Male : Gender.Female,
-                RaceTime = _random.Next()
-            };
+                yield return new Runner
+                {
+                    Age = _random.Next(20, 70),
+                    Gender = _random.Next() % 2 == 0 ? Gender.Male : Gender.Female,
+                    RaceTime = _random.Next()
+                };
+            }
         }
     }
 }

@@ -29,5 +29,10 @@
                 return (base.GetHashCode() * 397) ^ BIB;
             }
         }
+
+        public override string ToString()
+        {
+            return $"BIB :{BIB}\t{base.ToString()}";
+        }
     }
 }
